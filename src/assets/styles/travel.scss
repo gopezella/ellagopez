@@ -1,0 +1,275 @@
+$theme-color: #0B4775;
+
+.travel-section {
+    min-height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .travel-title-div {
+        margin-top: 5rem;
+
+        hr {
+            width: 30%;
+            border: 2px solid $theme-color;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+            letter-spacing: 0.3rem;
+            font-weight: 600;
+            color: $theme-color;
+        }
+    }
+
+    .tab-div {
+        justify-content: center;
+        margin-top: 4rem;
+
+        .nav-tabs {
+            border-bottom: none;
+            width: 100%;
+
+            .nav-item {
+
+                .nav-link {
+                    // padding: 10px 20px;
+                    box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.06), -8px -8px 16px 0px #fff;
+                    background: #f2f4f8;
+                    border-radius: 10px;
+                    text-align: center;
+
+                    svg {
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 50%;
+                    }
+
+                    p {
+                        display: inline-block;
+                        font-size: 0.8rem;
+                        margin-left: 1rem;
+                        color: darkgray;
+                        letter-spacing: 2px;
+                        font-weight: 400;
+                    }
+                }
+
+                .active {
+                    box-shadow: inset 3px 3px 6px 0px rgba(0, 0, 0, 0.06), inset -3px -3px 6px 0px #fff !important;
+
+                    background-color: transparent;
+
+                    p {
+                        color: gray;
+                    }
+
+                    #macau-icon {
+                        rect {
+                            fill: #496E2D !important;
+                        }
+                    }
+
+                    #hongkong-icon {
+                        rect {
+                            fill: #D80027 !important;
+                        }
+                    }
+
+                    #taiwan-icon {
+                        rect {
+                            fill: #D80027 !important
+                        }
+
+                        .active-path {
+                            fill: #0052B4 !important
+                        }
+
+                        polygon {
+                            fill: white !important;
+                        }
+
+                        path {
+                            fill: white !important
+                        }
+                    }
+
+                    #sg-icon {
+                        .active-path {
+                            fill: #D80027 !important
+                        }
+                    }
+                }
+
+                .macau-link:hover {
+                    box-shadow: inset 3px 3px 6px 0px rgba(0, 0, 0, 0.06), inset -3px -3px 6px 0px #fff !important;
+
+                    p {
+                        color: gray;
+                    }
+
+                    #macau-icon {
+                        rect {
+                            fill: #496E2D !important;
+                        }
+                    }
+                }
+
+                .hongkong-link:hover {
+                    box-shadow: inset 3px 3px 6px 0px rgba(0, 0, 0, 0.06), inset -3px -3px 6px 0px #fff !important;
+
+                    p {
+                        color: gray;
+                    }
+
+                    #hongkong-icon {
+                        rect {
+                            fill: #D80027 !important;
+                        }
+                    }
+                }
+
+                .taiwan-link:hover {
+                    box-shadow: inset 3px 3px 6px 0px rgba(0, 0, 0, 0.06), inset -3px -3px 6px 0px #fff !important;
+
+                    p {
+                        color: gray;
+                    }
+
+                    #taiwan-icon {
+                        rect {
+                            fill: #D80027 !important
+                        }
+
+                        .active-path {
+                            fill: #0052B4 !important
+                        }
+
+                        polygon {
+                            fill: white !important;
+                        }
+
+                        path {
+                            fill: white !important
+                        }
+                    }
+                }
+
+                .singapore-link:hover {
+                    box-shadow: inset 3px 3px 6px 0px rgba(0, 0, 0, 0.06), inset -3px -3px 6px 0px #fff !important;
+
+                    p {
+                        color: gray;
+                    }
+
+                    #sg-icon {
+                        .active-path {
+                            fill: #D80027 !important
+                        }
+                    }
+                }
+            }
+
+            // .nav-item:not(:last-child) {
+            //     margin-right: 2rem;
+            // }
+
+        }
+    }
+
+    .tab-content {
+        margin-top: 4rem;
+
+        .item-div {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            .destination-content {
+                box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.06), -8px -8px 16px 0px #fff;
+                background: #f2f4f8;
+                border-radius: 15px;
+
+                .upper-div {
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        // filter: grayscale(100%);
+                    }
+
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 100%;
+                        width: 100%;
+                        opacity: 0.7;
+                        transition: .5s ease;
+                        background-color: $theme-color;
+                    }
+                }
+
+                :hover .overlay {
+                    opacity: 0;
+                }
+
+                .lower-div {
+                    padding: 20px;
+
+                    p {
+                        font-weight: 100;
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+//Media Queries 
+@media (max-width: 992px) {
+    .travel-section {
+        .tab-div {
+            .nav-link {
+                svg {
+                    width: 2rem !important;
+                    height: 2rem !important;
+                }
+
+                p {
+                    font-size: 0.6rem !important;
+                    margin-left: 0.5rem !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .travel-section {
+        .tab-div {
+
+            .nav-item {
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                .nav-link {
+                    text-align: center;
+
+                    p {
+                        display: block !important;
+                        font-size: 0.7rem !important;
+                        padding-top: 0.5rem;
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }
+
+        }
+    }
+}

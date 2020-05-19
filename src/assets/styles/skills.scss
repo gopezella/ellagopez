@@ -1,0 +1,208 @@
+$theme-color: #0B4775;
+
+.skills-section {
+    min-height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .skills-title-div {
+        margin-top: 5rem;
+
+        hr {
+            width: 30%;
+            border: 2px solid $theme-color;
+        }
+
+        p {
+            font-size: 1.3rem;
+            letter-spacing: 0.3rem;
+            font-weight: 600;
+            color: $theme-color;
+        }
+    }
+
+    #spin {
+        p {
+            animation: spin 10s linear infinite;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            font-style: italic;
+            font-weight: 700;
+            width: 97.5%;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        p:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        p:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        p:nth-child(3) {
+            animation-delay: 4s;
+        }
+
+        p:nth-child(4) {
+            animation-delay: 6s;
+        }
+
+        p:nth-child(5) {
+            animation-delay: 8s;
+        }
+    }
+
+    @keyframes spin {
+        0% {
+
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        2% {
+
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        18% {
+
+            opacity: 1;
+            transform: translateY(0px)
+        }
+
+        20% {
+
+            opacity: 0;
+            transform: translateY(50px)
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(50px)
+        }
+    }
+
+    .skills-div {
+        margin: 5rem 0;
+
+        .skill-item-div {
+            :hover .html5-icon {
+                color: #E34F26;
+            }
+
+            :hover .css3-icon {
+                color: #1A71B5;
+            }
+
+            :hover .js-icon {
+                color: #F0D91F;
+            }
+
+            :hover .react-icon {
+                color: #01D3F9
+            }
+
+            :hover .sass-icon {
+                color: #CC6799
+            }
+
+            :hover .bootstrap-icon {
+                color: #563E7D;
+            }
+
+            .skill-item-content {
+                padding: 30px 30px;
+                // box-shadow: -1px 0 15px -6px rgba(0, 0, 0, 0.15);
+                -webkit-box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.06), -8px -8px 16px 0px #fff;
+                box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.06), -8px -8px 16px 0px #fff;
+                background: #f2f4f8;
+                border-radius: 10px;
+            }
+
+            .upper-div {
+                padding: 20px 0px;
+                border-bottom: 0.5px solid lightgray;
+
+                svg {
+                    font-size: 5rem;
+                }
+            }
+
+            .lower-div {
+                margin-top: 1rem;
+
+                p {
+                    font-weight: 100;
+                    color: gray;
+                }
+
+                .learn-link-div {
+                    text-align: end;
+
+                    a {
+                        color: $theme-color;
+
+                        p {
+                            color: $theme-color;
+                        }
+
+                        ion-icon {
+                            vertical-align: middle;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        .skill-item-div:hover {
+            -o-transform: scale(1.03);
+            transform: scale(1.03);
+        }
+
+        .second-row {
+            margin-top: 2rem;
+        }
+
+    }
+
+
+}
+
+//Media Queries
+@media (max-width: 992px) {
+    .skills-div {
+        .skill-item-div {
+            margin: 20px 0px;
+        }
+    }
+}
+
+@media (max-width: 767px) {}
+
+@media only screen and (max-width: 600px) {
+    .skills-section {
+        #spin {
+            p {
+                width: 95%;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .skills-section {
+        #spin {
+            p {
+                width: 93% !important;
+            }
+        }
+    }
+}

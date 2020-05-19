@@ -1,0 +1,215 @@
+$theme-color: #0B4775;
+
+.home-section {
+    min-height: calc(var(--vh, 1vh) * 100);
+    // border: 2px solid red;
+    padding-top: 200px;
+    background-image: url(../images/bg.png);
+    // background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    h1 {
+        font-size: 3.5rem;
+        display: flex;
+
+        span {
+            font-weight: 300;
+        }
+
+        #spin {
+            color: $theme-color;
+
+            p {
+                top: 0;
+                animation: spin 10s linear infinite;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+
+            }
+
+            p:nth-child(1) {
+                animation-delay: 0s;
+            }
+
+            p:nth-child(2) {
+                animation-delay: 2s;
+            }
+
+            p:nth-child(3) {
+                animation-delay: 4s;
+            }
+
+            p:nth-child(4) {
+                animation-delay: 6s;
+            }
+
+            p:nth-child(5) {
+                animation-delay: 8s;
+            }
+
+        }
+    }
+
+    h2 {
+        border-left: 5px solid $theme-color;
+        padding-left: 19px;
+        font-size: 4rem !important;
+        color: #0B4775;
+
+        span {
+            font-weight: 200;
+        }
+
+        p {
+            font-weight: 200 !important;
+            font-size: 1.5rem;
+            color: $theme-color;
+            letter-spacing: 7.5px;
+        }
+
+        img {
+            width: 6%;
+            vertical-align: baseline;
+            margin-left: 5px;
+        }
+    }
+
+    .about-link {
+        .btn-about {
+            border-radius: 8px !important;
+            padding: 15px 50px !important;
+            color: $theme-color !important;
+            // border-color: #0B4775 !important;
+            box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.06), -8px -8px 16px 0px #fff;
+            background: #f2f4f8;
+
+            p {
+                font-size: 17px;
+                margin-bottom: 0;
+            }
+
+        }
+
+        :hover {
+            // background: #0B4775;
+            // color: white !important
+            box-shadow: inset 3px 3px 6px 0px rgba(0, 0, 0, 0.06), inset -3px -3px 6px 0px #fff;
+            color: $theme-color;
+        }
+    }
+
+    .arrow-container {
+        text-align: center;
+        margin-top: 10%;
+
+        svg {
+            width: 5%;
+            height: 100%;
+        }
+    }
+
+
+    @keyframes spin {
+        0% {
+
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        2% {
+
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        18% {
+
+            opacity: 1;
+            transform: translateY(0px)
+        }
+
+        20% {
+
+            opacity: 0;
+            transform: translateY(50px)
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(50px)
+        }
+    }
+}
+
+// Media Queries
+@media (max-width: 992px) {
+    .home-section {
+        h2 {
+            img {
+                width: 8% !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .home-section {
+        background-size: 100% 80%;
+
+        h1 {
+            font-size: 2rem;
+
+            p {
+                margin-left: 1%;
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem !important;
+
+            img {
+                width: 12% !important;
+                vertical-align: baseline !important;
+            }
+
+            p {
+                font-size: 1rem;
+                letter-spacing: 3.5px;
+
+            }
+        }
+
+        .btn-about {
+            margin-left: 0 !important;
+
+            p {
+                font-size: 15px !important;
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .home-section {
+
+        background-size: 100% 65%;
+
+        .arrow-container {
+            margin-top: 40%;
+
+            svg {
+                width: 10%;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 465px) {
+    .home-section {
+        background-size: 100% 45%;
+    }
+}
