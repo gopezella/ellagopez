@@ -123,7 +123,7 @@ class skills extends Component {
                                 </div>
                                 <div className="lower-div">
                                     <h5>BOOTSTRAP</h5>
-                                    <p> An open-source framework. It includes HTML and CSS based design templates</p>
+                                    <p> Bootstrap is an open-source framework. It includes HTML and CSS based design templates</p>
                                     <div className="learn-link-div">
                                         <a href="https://www.youtube.com/watch?v=RyTRgQ7k6QE" target="_blank" rel="noopener noreferrer">
                                             <p className="d-inline-block m-0 mr-1">Learn here</p>
