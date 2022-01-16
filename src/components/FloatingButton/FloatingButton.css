@@ -1,0 +1,32 @@
+.floating-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: #8fa3a2;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.floating-button img {
+  position: relative;
+  height: 100%;
+  max-width: 2.3rem;
+  width: 100%;
+}
+
+.light {
+  box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
+    0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
+}
+
+.dark {
+  box-shadow: -1px -1px 29px -5px rgba(101, 130, 128, 1);
+}
