@@ -38,16 +38,39 @@ export default function Landing(props) {
 
             <ul className="socialLinks">
               <li>
-                <MailOutlined />
+                <a href="mailto:gopezellam@gmail.com">
+                  <MailOutlined />
+                </a>
               </li>
               <li>
-                <GithubOutlined />
+                <a
+                  href="https://github.com/gopezella"
+                  target="_blank"
+                  without
+                  rel="noreferrer"
+                >
+                  <GithubOutlined />
+                </a>
               </li>
               <li>
-                <LinkedinFilled />
+                <a
+                  href="https://www.linkedin.com/in/ellagopez/"
+                  target="_blank"
+                  without
+                  rel="noreferrer"
+                >
+                  <LinkedinFilled />
+                </a>
               </li>
               <li>
-                <FacebookFilled />
+                <a
+                  href="https://www.facebook.com/gopezella/"
+                  target="_blank"
+                  without
+                  rel="noreferrer"
+                >
+                  <FacebookFilled />
+                </a>
               </li>
             </ul>
             <Link to="about" spy={true} smooth={true}>

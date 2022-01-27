@@ -57,6 +57,10 @@
   padding: 0 1.3rem;
 }
 
+.socialLinks li a {
+  color: unset;
+}
+
 .socialLinks li:hover svg {
   color: #a2b29f;
   cursor: pointer;

@@ -1,19 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-scroll";
 import "../FloatingButton/FloatingButton.css";
 import messageIcon from "../../assets/message.svg";
 
 export default function Floatingbutton(props) {
   const [isButtonSticky, setIsButtonSticky] = useState(false);
+
   useEffect(() => {
     const landingButton = document.getElementById("landingButton");
+    const contactSection = document.getElementById("contact");
+
     const landingButtonPosition =
       landingButton?.offsetTop || window.pageYOffset;
-    console.log(landingButtonPosition);
+
+    const contactPosition = contactSection?.offsetTop || window.pageYOffset;
+    // console.log(contactPosition);
 
     const scrollCallBack = () => {
-      const isButtonOnSticky = window.pageYOffset > landingButtonPosition;
-      setIsButtonSticky(isButtonOnSticky);
+      // const isButtonOnSticky = window.pageYOffset > landingButtonPosition;
+      // setIsButtonSticky(isButtonOnSticky);
+      // console.log(window.pageYOffset);
+      if (
+        window.pageYOffset > landingButtonPosition &&
+        window.pageYOffset < contactPosition
+      ) {
+        setIsButtonSticky(true);
+      } else if (window.pageYOffset < landingButtonPosition) {
+        setIsButtonSticky(false);
+      } else {
+        setIsButtonSticky(false);
+      }
     };
 
     window.addEventListener("scroll", scrollCallBack);
@@ -25,6 +42,8 @@ export default function Floatingbutton(props) {
 
   const state = useSelector((state) => state);
 
+  // console.log(isButtonSticky);
+
   return (
     <>
       <div
@@ -34,7 +53,9 @@ export default function Floatingbutton(props) {
           (state.toggleDarkTheme ? "dark" : "light")
         }
       >
-        <img src={messageIcon} alt="Contact Floating Button" />
+        <Link to="contact" spy={true} smooth={true}>
+          <img src={messageIcon} alt="Contact Floating Button" />
+        </Link>
       </div>
     </>
   );

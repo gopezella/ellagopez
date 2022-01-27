@@ -5,6 +5,7 @@ import About from "./sections/About/About";
 import FloatingButton from "./components/FloatingButton/FloatingButton";
 import Skills from "./sections/Skills/Skills";
 import Projects from "./sections/Projects/Projects";
+import Contact from "./sections/Contact/Contact";
 import { useSelector } from "react-redux";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Contact />
       <FloatingButton />
     </div>
   );

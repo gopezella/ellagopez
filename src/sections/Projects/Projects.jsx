@@ -78,10 +78,12 @@ export default function Projects(props) {
     <>
       <section id="projects">
         <div className="container">
-          <h1 className="portfolioHeader">PROJECTS</h1>
-          <Carousel dotPosition="bottom" draggable>
-            {project}
-          </Carousel>
+          <div>
+            <h1 className="portfolioHeader">PROJECTS</h1>
+            <Carousel dotPosition="bottom" draggable>
+              {project}
+            </Carousel>
+          </div>
         </div>
       </section>
     </>
