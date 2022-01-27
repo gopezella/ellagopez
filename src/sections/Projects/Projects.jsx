@@ -12,12 +12,12 @@ import whichdayz from "../../assets/wd.svg";
 export default function Projects(props) {
   const projects = [
     {
-      title: "Plowtopia",
+      title: "DigBicks",
       description:
-        "PlowTopia is a blockchain-based multiplayer RPG and builder game, where players can own customizable avatars, farming packages and NFTs. The game offers an exciting in-game environment with a virtual marketplace and a virtual trading experience where users can interact with other players through avatars to buy/sell/trade their in-game items and meet new friends.",
-      url: "https://plowtopia.io/",
-      tools: ["VueJS", "Bootstrap", "Firebase"],
-      image: plowtopia,
+        "DigBicks is a collection of unique NFTs in the Ethereum blockchain. Each DigBick has its distinct personality defined by carefully curated attributes such as headgears, weapons, and more. They are all fun and quirky, but you’d be more surprised by the rare ones! You can see more of our collection on OpenSea.",
+      url: "https://kpop-digital.com/",
+      tools: ["ReactJS", "Redux", "Bootstrap"],
+      image: digbicks,
     },
     {
       title: "KPOP Digital",
@@ -28,22 +28,24 @@ export default function Projects(props) {
       image: kpop,
     },
     {
+      title: "Plowtopia",
+      description:
+        "PlowTopia is a blockchain-based multiplayer RPG and builder game, where players can own customizable avatars, farming packages and NFTs. The game offers an exciting in-game environment with a virtual marketplace and a virtual trading experience where users can interact with other players through avatars to buy/sell/trade their in-game items and meet new friends.",
+      url: "https://plowtopia.io/",
+      tools: ["VueJS", "Bootstrap", "Firebase"],
+      image: plowtopia,
+    },
+
+    {
       title: "ATLBrokenPhone",
       description:
-        "Degen Academy is a Play To Earn blockchained-based games to maximize profits and provide opportunities to our fellow degens.",
+        "The official website of a Repair center based in Atlanta, USA. Built With NextJs and accessible in any device.",
 
       url: "https://www.atlbrokenphones.com/",
       tools: ["ReactJS", "NextJS", "Bootstrap"],
       image: atlbrokenphones,
     },
-    {
-      title: "DigBicks",
-      description:
-        "DigBicks is a collection of unique NFTs in the Ethereum blockchain. Each DigBick has its distinct personality defined by carefully curated attributes such as headgears, weapons, and more. They are all fun and quirky, but you’d be more surprised by the rare ones! You can see more of our collection on OpenSea.",
-      url: "https://kpop-digital.com/",
-      tools: ["ReactJS", "Redux", "Bootstrap"],
-      image: digbicks,
-    },
+
     {
       title: "Degen Academy",
       description:
@@ -80,7 +82,7 @@ export default function Projects(props) {
         <div className="container">
           <div>
             <h1 className="portfolioHeader">PROJECTS</h1>
-            <Carousel dotPosition="bottom" draggable>
+            <Carousel dotPosition="bottom" draggable autoplay>
               {project}
             </Carousel>
           </div>
